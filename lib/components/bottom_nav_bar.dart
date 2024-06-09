@@ -21,10 +21,12 @@ class BottomNavBar extends StatelessWidget {
           GButton(
             icon: Icons.home,
             text: 'Shop',
+            margin: EdgeInsets.only(right:4),
           ),
           GButton(
             icon: Icons.shopping_basket_rounded,
             text: 'Cart',
+            margin: EdgeInsets.only(left:4),
           )
         ],
       ),

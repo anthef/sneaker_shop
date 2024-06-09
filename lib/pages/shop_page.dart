@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:sneaker_shop/components/shoe_tile.dart';
 
 class ShopPage extends StatefulWidget {
   const ShopPage({super.key});
@@ -30,7 +31,51 @@ class _ShopPageState extends State<ShopPage> {
               Icon(Icons.search)
             ],
           ),
-        )
+        ),
+
+
+      Padding(
+        padding: const EdgeInsets.symmetric(vertical:25.0),
+        child: Text(
+          'everyone flies.. some fly longer than others',
+          style: TextStyle(color:Colors.grey[600]),
+          ),
+      ),
+
+      const Padding(
+        padding: EdgeInsets.symmetric(horizontal: 25.0),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          crossAxisAlignment: CrossAxisAlignment.end,
+          children: [
+            Text(
+              'Hot Picks 🔥',
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 24,
+              )
+              ),
+            
+            Text(
+              'See all',
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                color: Colors.blue
+              )
+              ),
+          ],
+        ),
+      ),
+
+
+      const SizedBox(height:10),
+
+      Expanded(
+        child: ListView.builder(itemBuilder: (context, index) => ShoeTile(),
+        ),
+      )
+
+
       ],
 
     );
