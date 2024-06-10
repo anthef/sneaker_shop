@@ -91,6 +91,7 @@ class _HomePageState extends State<HomePage> {
             ),
           ),
 
+          const Spacer(),
           const Padding(
             padding: EdgeInsets.only(left:25.0, bottom:25.0),
             child: ListTile(
